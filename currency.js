@@ -53,6 +53,11 @@ function currency(object) {
         var ccbyLocation = results * rates.PHP;
         document.getElementById('cc').innerHTML = "₱" + Math.round(ccbyLocation * 100) / 100 + " PHP";
       break;
+      default:
+        var results = +document.getElementById("cc").innerHTML;
+        var ccbyLocation = results * rates.USD;
+        document.getElementById('cc').innerHTML = "$" + Math.round(ccbyLocation * 100) / 100;
+      break;
     }
   }
 
